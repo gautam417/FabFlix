@@ -1,0 +1,16 @@
+[2019/06/02 17:21:35][CONFIG][initLogger]  [32mLogging initialized.[0m
+[2019/06/02 17:21:35][CONFIG][initService]  Starting service...
+[2019/06/02 17:21:35][CONFIG][currentConfigs]  Scheme: http://
+[2019/06/02 17:21:35][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/06/02 17:21:35][CONFIG][currentConfigs]  Port: 5379
+[2019/06/02 17:21:35][CONFIG][currentConfigs]  Path: /
+[2019/06/02 17:21:35][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/06/02 17:21:35][CONFIG][currentConfigs]  Logger output file: webserver.log
+[2019/06/02 17:21:35][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/06/02 17:21:35][CONFIG][initHTTPServer]  Building URI from configs...
+[2019/06/02 17:21:35][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:5379/
+[2019/06/02 17:21:35][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/06/02 17:21:35][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/06/02 17:21:35][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/06/02 17:21:36][CONFIG][initHTTPServer]  [32mHTTP server started.[0m
+[2019/06/02 17:21:36][CONFIG][initService]  Service initialized

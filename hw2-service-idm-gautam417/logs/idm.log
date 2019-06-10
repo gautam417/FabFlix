@@ -1,0 +1,266 @@
+[2019/06/07 21:10:02][CONFIG][initLogger]  Logging initialized.
+[2019/06/07 21:10:02][CONFIG][initService]  Starting service...
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Scheme: http://
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Port: 5360
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Path: /api/idm
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Logger output file: idm.log
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Database hostname: matt-smith-v4.ics.uci.edu
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Database port: 3306
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Database username: cs122b_db92
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Database password provided? true
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Database name: cs122b_db92
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Session timeout: 5000
+[2019/06/07 21:10:02][CONFIG][currentConfigs]  Session expiration: 8000
+[2019/06/07 21:10:02][CONFIG][connectToDatabase]  Connecting to database...
+[2019/06/07 21:10:02][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://matt-smith-v4.ics.uci.edu:3306/cs122b_db92?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/07 21:10:03][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://matt-smith-v4.ics.uci.edu:3306/cs122b_db92?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/07 21:10:03][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/06/07 21:10:03][CONFIG][initHTTPServer]  Building URI from configs...
+[2019/06/07 21:10:03][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:5360/api/idm
+[2019/06/07 21:10:03][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/06/07 21:10:03][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/06/07 21:10:03][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/06/07 21:10:04][CONFIG][initHTTPServer]  HTTP server started.
+[2019/06/07 21:10:04][CONFIG][initService]  Service initialized.
+[2019/06/07 21:10:54][INFO][getSesh]  Received request for verifying a session.
+[2019/06/07 21:10:54][INFO][getSesh]  Request:
+{"email":"kendo1@gmail.com","sessionID":"1cba7a66ec581b3d105ffbe38671e377c6c0aeb16a4d78a64c0a0c3c7af8eeead98a44074ca46a5bea28fa3da68a0654f4bac3ae5685aa04a267b6554a76cb78"}
+
+[2019/06/07 21:10:54][INFO][getSesh]  Email: kendo1@gmail.com
+[2019/06/07 21:10:54][INFO][getSesh]  SessionID: 1cba7a66ec581b3d105ffbe38671e377c6c0aeb16a4d78a64c0a0c3c7af8eeead98a44074ca46a5bea28fa3da68a0654f4bac3ae5685aa04a267b6554a76cb78
+[2019/06/07 21:10:54][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email = 'kendo1@gmail.com';
+[2019/06/07 21:10:54][INFO][retrieveByEmailFromDB]  Query succeeded. 
+[2019/06/07 21:10:54][INFO][retrieveByEmailFromDB]  No emails found in DB.
+[2019/06/07 21:11:04][INFO][getLog]  Received request for logging in a user.
+[2019/06/07 21:11:04][INFO][getLog]  Email: kendo1@gmail.com
+[2019/06/07 21:11:04][INFO][getLog]  Password: sUkino11!
+[2019/06/07 21:11:04][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email LIKE 'kendo1@gmail.com';
+[2019/06/07 21:11:05][INFO][retrieveByEmailFromDB]  Query succeeded.
+[2019/06/07 21:11:05][INFO][retrieveByEmailFromDB]  No emails found in DB.
+[2019/06/07 21:11:09][INFO][getSesh]  Received request for verifying a session.
+[2019/06/07 21:11:09][INFO][getSesh]  Request:
+{"email":"kendo1@gmail.com","sessionID":"1cba7a66ec581b3d105ffbe38671e377c6c0aeb16a4d78a64c0a0c3c7af8eeead98a44074ca46a5bea28fa3da68a0654f4bac3ae5685aa04a267b6554a76cb78"}
+
+[2019/06/07 21:11:09][INFO][getSesh]  Email: kendo1@gmail.com
+[2019/06/07 21:11:09][INFO][getSesh]  SessionID: 1cba7a66ec581b3d105ffbe38671e377c6c0aeb16a4d78a64c0a0c3c7af8eeead98a44074ca46a5bea28fa3da68a0654f4bac3ae5685aa04a267b6554a76cb78
+[2019/06/07 21:11:09][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email = 'kendo1@gmail.com';
+[2019/06/07 21:11:09][INFO][retrieveByEmailFromDB]  Query succeeded. 
+[2019/06/07 21:11:09][INFO][retrieveByEmailFromDB]  No emails found in DB.
+[2019/06/07 21:11:14][INFO][getLog]  Received request for logging in a user.
+[2019/06/07 21:11:14][INFO][getLog]  Email: kendo1@gmail.com
+[2019/06/07 21:11:14][INFO][getLog]  Password: sUkino11!
+[2019/06/07 21:11:14][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email LIKE 'kendo1@gmail.com';
+[2019/06/07 21:11:14][INFO][retrieveByEmailFromDB]  Query succeeded.
+[2019/06/07 21:11:14][INFO][retrieveByEmailFromDB]  No emails found in DB.
+[2019/06/07 21:11:30][INFO][getReg]  Received request for registering a user.
+[2019/06/07 21:11:30][INFO][getReg]  Email: gautam417@yahoo.com
+[2019/06/07 21:11:30][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email LIKE 'gautam417@yahoo.com';
+[2019/06/07 21:11:30][INFO][retrieveByEmailFromDB]  Query succeeded.
+[2019/06/07 21:11:30][INFO][retrieveByEmailFromDB]  No emails found in DB.
+[2019/06/07 21:11:30][INFO][getReg]  Credentials are valid.
+[2019/06/07 21:11:30][INFO][insertUserToDb]  Inserting registered user into database...
+[2019/06/07 21:11:30][INFO][insertUserToDb]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO users (email, status, plevel, salt, pword) VALUES ('gautam417@yahoo.com', 1, 5, 'c8637a47', 'f8aed0fb504be1db6235eb3d659798e6bda3329ab5a7e692f379e436b21bd19e6b0531a40ad9dfa66d26f41399f06ee481585ad974efadeb47b219f0c965feea');
+[2019/06/07 21:11:31][INFO][getReg]  Insertion was successful.
+[2019/06/07 21:11:42][INFO][getLog]  Received request for logging in a user.
+[2019/06/07 21:11:42][INFO][getLog]  Email: gautam417@yahoo.com
+[2019/06/07 21:11:42][INFO][getLog]  Password: sUkino11!
+[2019/06/07 21:11:42][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email LIKE 'gautam417@yahoo.com';
+[2019/06/07 21:11:42][INFO][retrieveByEmailFromDB]  Query succeeded.
+[2019/06/07 21:11:42][INFO][retrievePassFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, salt, pword FROM users WHERE email LIKE 'gautam417@yahoo.com';
+[2019/06/07 21:11:42][INFO][retrievePassFromDB]  Query succeeded.
+[2019/06/07 21:11:42][INFO][retrievePassFromDB]  Passwords dont match in DB.
+[2019/06/07 21:11:47][INFO][getLog]  Received request for logging in a user.
+[2019/06/07 21:11:47][INFO][getLog]  Email: gautam417@yahoo.com
+[2019/06/07 21:11:47][INFO][getLog]  Password: sUkino11!
+[2019/06/07 21:11:47][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email LIKE 'gautam417@yahoo.com';
+[2019/06/07 21:11:47][INFO][retrieveByEmailFromDB]  Query succeeded.
+[2019/06/07 21:11:47][INFO][retrievePassFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, salt, pword FROM users WHERE email LIKE 'gautam417@yahoo.com';
+[2019/06/07 21:11:47][INFO][retrievePassFromDB]  Query succeeded.
+[2019/06/07 21:11:47][INFO][retrievePassFromDB]  Passwords dont match in DB.
+[2019/06/07 21:12:02][INFO][getReg]  Received request for registering a user.
+[2019/06/07 21:12:02][INFO][getReg]  Email: gmehta1@uci.edu
+[2019/06/07 21:12:02][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email LIKE 'gmehta1@uci.edu';
+[2019/06/07 21:12:02][INFO][retrieveByEmailFromDB]  Query succeeded.
+[2019/06/07 21:12:02][INFO][retrieveByEmailFromDB]  No emails found in DB.
+[2019/06/07 21:12:02][INFO][getReg]  Credentials are valid.
+[2019/06/07 21:12:02][INFO][insertUserToDb]  Inserting registered user into database...
+[2019/06/07 21:12:02][INFO][insertUserToDb]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO users (email, status, plevel, salt, pword) VALUES ('gmehta1@uci.edu', 1, 5, 'cac110e1', '710ccf9d5171db2ab95654f3da9f627688a5a81996255e851a609d869dfeb833df8072444c0e3b4e5102b030136d56bf37f62bc517983889780b0aac6d5c922c');
+[2019/06/07 21:12:02][INFO][getReg]  Insertion was successful.
+[2019/06/07 21:12:11][INFO][getLog]  Received request for logging in a user.
+[2019/06/07 21:12:11][INFO][getLog]  Email: gmehta1@uci.edu
+[2019/06/07 21:12:11][INFO][getLog]  Password: sUkino11!
+[2019/06/07 21:12:11][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email LIKE 'gmehta1@uci.edu';
+[2019/06/07 21:12:11][INFO][retrieveByEmailFromDB]  Query succeeded.
+[2019/06/07 21:12:11][INFO][retrievePassFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, salt, pword FROM users WHERE email LIKE 'gmehta1@uci.edu';
+[2019/06/07 21:12:11][INFO][retrievePassFromDB]  Query succeeded.
+[2019/06/07 21:12:11][INFO][retrievePassFromDB]  Something matched.
+[2019/06/07 21:12:11][INFO][retrieveLoginFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID,email,status,timeCreated,lastUsed,exprTime FROM sessions WHERE email LIKE 'gmehta1@uci.edu';
+[2019/06/07 21:12:11][INFO][retrieveLoginFromDB]  Query succeeded.
+[2019/06/07 21:12:11][INFO][retrieveLoginFromDB]  Insertion query for sessions:com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO sessions VALUES ('e39263631c152462484a35af1718126cf824c54891675807bc34a4fce1570d49f7c0a2763d5f4f458b191bccd218c248d5fc4dc02dc9d3f841b7ebfc19cfabbd', 'gmehta1@uci.edu', 1, '2019-06-07 21:12:11.662', '2019-06-07 21:12:11.662', '2019-06-07 21:12:19.662');
+[2019/06/07 21:12:11][INFO][retrieveLoginFromDB]  Insertion Query for sessions succeeded.
+[2019/06/07 21:12:17][INFO][getSesh]  Received request for verifying a session.
+[2019/06/07 21:12:17][INFO][getSesh]  Request:
+{"email":"gmehta1@uci.edu","sessionID":"e39263631c152462484a35af1718126cf824c54891675807bc34a4fce1570d49f7c0a2763d5f4f458b191bccd218c248d5fc4dc02dc9d3f841b7ebfc19cfabbd"}
+
+[2019/06/07 21:12:17][INFO][getSesh]  Email: gmehta1@uci.edu
+[2019/06/07 21:12:17][INFO][getSesh]  SessionID: e39263631c152462484a35af1718126cf824c54891675807bc34a4fce1570d49f7c0a2763d5f4f458b191bccd218c248d5fc4dc02dc9d3f841b7ebfc19cfabbd
+[2019/06/07 21:12:17][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email = 'gmehta1@uci.edu';
+[2019/06/07 21:12:17][INFO][retrieveByEmailFromDB]  Query succeeded. 
+[2019/06/07 21:12:17][INFO][VerifySessionFromDB]  Trying VERIFY SESSSION query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID, email, status, timeCreated, lastUsed, exprTime FROM sessions WHERE sessionID LIKE 'e39263631c152462484a35af1718126cf824c54891675807bc34a4fce1570d49f7c0a2763d5f4f458b191bccd218c248d5fc4dc02dc9d3f841b7ebfc19cfabbd';
+[2019/06/07 21:12:17][INFO][VerifySessionFromDB]  Query succeeded. 
+[2019/06/07 21:13:04][INFO][getLog]  Received request for logging in a user.
+[2019/06/07 21:13:04][INFO][getLog]  Email: gmehta1@uci.edu
+[2019/06/07 21:13:04][INFO][getLog]  Password: sUkino11!
+[2019/06/07 21:13:04][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email LIKE 'gmehta1@uci.edu';
+[2019/06/07 21:13:04][INFO][retrieveByEmailFromDB]  Query succeeded.
+[2019/06/07 21:13:04][INFO][retrievePassFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, salt, pword FROM users WHERE email LIKE 'gmehta1@uci.edu';
+[2019/06/07 21:13:04][INFO][retrievePassFromDB]  Query succeeded.
+[2019/06/07 21:13:04][INFO][retrievePassFromDB]  Something matched.
+[2019/06/07 21:13:04][INFO][retrieveLoginFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID,email,status,timeCreated,lastUsed,exprTime FROM sessions WHERE email LIKE 'gmehta1@uci.edu';
+[2019/06/07 21:13:04][INFO][retrieveLoginFromDB]  Query succeeded.
+[2019/06/07 21:13:04][INFO][retrieveLoginFromDB]  Retrieved login: e39263631c152462484a35af1718126cf824c54891675807bc34a4fce1570d49f7c0a2763d5f4f458b191bccd218c248d5fc4dc02dc9d3f841b7ebfc19cfabbd
+[2019/06/07 21:13:04][INFO][retrieveLoginFromDB]  Trying UPDATE query:com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET status = 4 WHERE sessionID LIKE 'e39263631c152462484a35af1718126cf824c54891675807bc34a4fce1570d49f7c0a2763d5f4f458b191bccd218c248d5fc4dc02dc9d3f841b7ebfc19cfabbd';
+[2019/06/07 21:13:04][INFO][retrieveLoginFromDB]  UPDATE query succeeded.
+[2019/06/07 21:13:11][INFO][getSesh]  Received request for verifying a session.
+[2019/06/07 21:13:11][INFO][getSesh]  Request:
+{"email":"gmehta1@uci.edu","sessionID":"037032630887929bd5842e40a3e806f4b67c78c8b87fa58e4fcd473a3f3f40cdc4e08fb9ecfd58a51c2abcd04f64a703f8da95de6f7a4a606cbd5568b5813022"}
+
+[2019/06/07 21:13:11][INFO][getSesh]  Email: gmehta1@uci.edu
+[2019/06/07 21:13:11][INFO][getSesh]  SessionID: 037032630887929bd5842e40a3e806f4b67c78c8b87fa58e4fcd473a3f3f40cdc4e08fb9ecfd58a51c2abcd04f64a703f8da95de6f7a4a606cbd5568b5813022
+[2019/06/07 21:13:11][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email = 'gmehta1@uci.edu';
+[2019/06/07 21:13:11][INFO][retrieveByEmailFromDB]  Query succeeded. 
+[2019/06/07 21:13:11][INFO][VerifySessionFromDB]  Trying VERIFY SESSSION query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID, email, status, timeCreated, lastUsed, exprTime FROM sessions WHERE sessionID LIKE '037032630887929bd5842e40a3e806f4b67c78c8b87fa58e4fcd473a3f3f40cdc4e08fb9ecfd58a51c2abcd04f64a703f8da95de6f7a4a606cbd5568b5813022';
+[2019/06/07 21:13:11][INFO][VerifySessionFromDB]  Query succeeded. 
+[2019/06/07 21:13:53][INFO][getSesh]  Received request for verifying a session.
+[2019/06/07 21:13:53][INFO][getSesh]  Request:
+{"email":"gmehta1@uci.edu","sessionID":"037032630887929bd5842e40a3e806f4b67c78c8b87fa58e4fcd473a3f3f40cdc4e08fb9ecfd58a51c2abcd04f64a703f8da95de6f7a4a606cbd5568b5813022"}
+
+[2019/06/07 21:13:53][INFO][getSesh]  Email: gmehta1@uci.edu
+[2019/06/07 21:13:53][INFO][getSesh]  SessionID: 037032630887929bd5842e40a3e806f4b67c78c8b87fa58e4fcd473a3f3f40cdc4e08fb9ecfd58a51c2abcd04f64a703f8da95de6f7a4a606cbd5568b5813022
+[2019/06/07 21:13:53][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email = 'gmehta1@uci.edu';
+[2019/06/07 21:13:53][INFO][retrieveByEmailFromDB]  Query succeeded. 
+[2019/06/07 21:13:53][INFO][VerifySessionFromDB]  Trying VERIFY SESSSION query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID, email, status, timeCreated, lastUsed, exprTime FROM sessions WHERE sessionID LIKE '037032630887929bd5842e40a3e806f4b67c78c8b87fa58e4fcd473a3f3f40cdc4e08fb9ecfd58a51c2abcd04f64a703f8da95de6f7a4a606cbd5568b5813022';
+[2019/06/07 21:13:53][INFO][VerifySessionFromDB]  Query succeeded. 
+[2019/06/07 21:14:23][INFO][getSesh]  Received request for verifying a session.
+[2019/06/07 21:14:23][INFO][getSesh]  Request:
+{"email":"gmehta1@uci.edu","sessionID":"037032630887929bd5842e40a3e806f4b67c78c8b87fa58e4fcd473a3f3f40cdc4e08fb9ecfd58a51c2abcd04f64a703f8da95de6f7a4a606cbd5568b5813022"}
+
+[2019/06/07 21:14:23][INFO][getSesh]  Email: gmehta1@uci.edu
+[2019/06/07 21:14:23][INFO][getSesh]  SessionID: 037032630887929bd5842e40a3e806f4b67c78c8b87fa58e4fcd473a3f3f40cdc4e08fb9ecfd58a51c2abcd04f64a703f8da95de6f7a4a606cbd5568b5813022
+[2019/06/07 21:14:23][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email = 'gmehta1@uci.edu';
+[2019/06/07 21:14:23][INFO][retrieveByEmailFromDB]  Query succeeded. 
+[2019/06/07 21:14:23][INFO][VerifySessionFromDB]  Trying VERIFY SESSSION query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID, email, status, timeCreated, lastUsed, exprTime FROM sessions WHERE sessionID LIKE '037032630887929bd5842e40a3e806f4b67c78c8b87fa58e4fcd473a3f3f40cdc4e08fb9ecfd58a51c2abcd04f64a703f8da95de6f7a4a606cbd5568b5813022';
+[2019/06/07 21:14:23][INFO][VerifySessionFromDB]  Query succeeded. 
+[2019/06/07 21:14:31][INFO][getSesh]  Received request for verifying a session.
+[2019/06/07 21:14:31][INFO][getSesh]  Request:
+{"email":"gmehta1@uci.edu","sessionID":"037032630887929bd5842e40a3e806f4b67c78c8b87fa58e4fcd473a3f3f40cdc4e08fb9ecfd58a51c2abcd04f64a703f8da95de6f7a4a606cbd5568b5813022"}
+
+[2019/06/07 21:14:31][INFO][getSesh]  Email: gmehta1@uci.edu
+[2019/06/07 21:14:31][INFO][getSesh]  SessionID: 037032630887929bd5842e40a3e806f4b67c78c8b87fa58e4fcd473a3f3f40cdc4e08fb9ecfd58a51c2abcd04f64a703f8da95de6f7a4a606cbd5568b5813022
+[2019/06/07 21:14:31][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email = 'gmehta1@uci.edu';
+[2019/06/07 21:14:31][INFO][retrieveByEmailFromDB]  Query succeeded. 
+[2019/06/07 21:14:31][INFO][VerifySessionFromDB]  Trying VERIFY SESSSION query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID, email, status, timeCreated, lastUsed, exprTime FROM sessions WHERE sessionID LIKE '037032630887929bd5842e40a3e806f4b67c78c8b87fa58e4fcd473a3f3f40cdc4e08fb9ecfd58a51c2abcd04f64a703f8da95de6f7a4a606cbd5568b5813022';
+[2019/06/07 21:14:31][INFO][VerifySessionFromDB]  Query succeeded. 
+[2019/06/07 21:15:08][INFO][getLog]  Received request for logging in a user.
+[2019/06/07 21:15:08][INFO][getLog]  Email: gmehta1@uci.edu
+[2019/06/07 21:15:08][INFO][getLog]  Password: sUkin11!
+[2019/06/07 21:15:08][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email LIKE 'gmehta1@uci.edu';
+[2019/06/07 21:15:08][INFO][retrieveByEmailFromDB]  Query succeeded.
+[2019/06/07 21:15:08][INFO][retrievePassFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, salt, pword FROM users WHERE email LIKE 'gmehta1@uci.edu';
+[2019/06/07 21:15:08][INFO][retrievePassFromDB]  Query succeeded.
+[2019/06/07 21:15:08][INFO][retrievePassFromDB]  Passwords dont match in DB.
+[2019/06/07 21:15:12][INFO][getLog]  Received request for logging in a user.
+[2019/06/07 21:15:12][INFO][getLog]  Email: gmehta1@uci.edu
+[2019/06/07 21:15:12][INFO][getLog]  Password: sUkino111!
+[2019/06/07 21:15:12][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email LIKE 'gmehta1@uci.edu';
+[2019/06/07 21:15:12][INFO][retrieveByEmailFromDB]  Query succeeded.
+[2019/06/07 21:15:12][INFO][retrievePassFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, salt, pword FROM users WHERE email LIKE 'gmehta1@uci.edu';
+[2019/06/07 21:15:12][INFO][retrievePassFromDB]  Query succeeded.
+[2019/06/07 21:15:12][INFO][retrievePassFromDB]  Passwords dont match in DB.
+[2019/06/07 21:15:18][INFO][getLog]  Received request for logging in a user.
+[2019/06/07 21:15:18][INFO][getLog]  Email: gmehta1@uci.edu
+[2019/06/07 21:15:18][INFO][getLog]  Password: sUkino11!
+[2019/06/07 21:15:18][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email LIKE 'gmehta1@uci.edu';
+[2019/06/07 21:15:18][INFO][retrieveByEmailFromDB]  Query succeeded.
+[2019/06/07 21:15:18][INFO][retrievePassFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email, salt, pword FROM users WHERE email LIKE 'gmehta1@uci.edu';
+[2019/06/07 21:15:18][INFO][retrievePassFromDB]  Query succeeded.
+[2019/06/07 21:15:18][INFO][retrievePassFromDB]  Something matched.
+[2019/06/07 21:15:18][INFO][retrieveLoginFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID,email,status,timeCreated,lastUsed,exprTime FROM sessions WHERE email LIKE 'gmehta1@uci.edu';
+[2019/06/07 21:15:18][INFO][retrieveLoginFromDB]  Query succeeded.
+[2019/06/07 21:15:18][INFO][retrieveLoginFromDB]  Retrieved login: 037032630887929bd5842e40a3e806f4b67c78c8b87fa58e4fcd473a3f3f40cdc4e08fb9ecfd58a51c2abcd04f64a703f8da95de6f7a4a606cbd5568b5813022
+[2019/06/07 21:15:18][INFO][retrieveLoginFromDB]  Trying UPDATE query:com.mysql.cj.jdbc.ClientPreparedStatement: UPDATE sessions SET status = 4 WHERE sessionID LIKE '037032630887929bd5842e40a3e806f4b67c78c8b87fa58e4fcd473a3f3f40cdc4e08fb9ecfd58a51c2abcd04f64a703f8da95de6f7a4a606cbd5568b5813022';
+[2019/06/07 21:15:18][INFO][retrieveLoginFromDB]  UPDATE query succeeded.
+[2019/06/07 21:15:25][INFO][getSesh]  Received request for verifying a session.
+[2019/06/07 21:15:25][INFO][getSesh]  Request:
+{"email":"gmehta1@uci.edu","sessionID":"68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068"}
+
+[2019/06/07 21:15:25][INFO][getSesh]  Email: gmehta1@uci.edu
+[2019/06/07 21:15:25][INFO][getSesh]  SessionID: 68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068
+[2019/06/07 21:15:25][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email = 'gmehta1@uci.edu';
+[2019/06/07 21:15:25][INFO][retrieveByEmailFromDB]  Query succeeded. 
+[2019/06/07 21:15:25][INFO][VerifySessionFromDB]  Trying VERIFY SESSSION query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID, email, status, timeCreated, lastUsed, exprTime FROM sessions WHERE sessionID LIKE '68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068';
+[2019/06/07 21:15:25][INFO][VerifySessionFromDB]  Query succeeded. 
+[2019/06/07 21:15:32][INFO][getSesh]  Received request for verifying a session.
+[2019/06/07 21:15:32][INFO][getSesh]  Request:
+{"email":"gmehta1@uci.edu","sessionID":"68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068"}
+
+[2019/06/07 21:15:32][INFO][getSesh]  Email: gmehta1@uci.edu
+[2019/06/07 21:15:32][INFO][getSesh]  SessionID: 68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068
+[2019/06/07 21:15:32][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email = 'gmehta1@uci.edu';
+[2019/06/07 21:15:32][INFO][retrieveByEmailFromDB]  Query succeeded. 
+[2019/06/07 21:15:32][INFO][VerifySessionFromDB]  Trying VERIFY SESSSION query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID, email, status, timeCreated, lastUsed, exprTime FROM sessions WHERE sessionID LIKE '68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068';
+[2019/06/07 21:15:32][INFO][VerifySessionFromDB]  Query succeeded. 
+[2019/06/07 21:16:18][INFO][getSesh]  Received request for verifying a session.
+[2019/06/07 21:16:18][INFO][getSesh]  Request:
+{"email":"gmehta1@uci.edu","sessionID":"68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068"}
+
+[2019/06/07 21:16:18][INFO][getSesh]  Email: gmehta1@uci.edu
+[2019/06/07 21:16:18][INFO][getSesh]  SessionID: 68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068
+[2019/06/07 21:16:18][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email = 'gmehta1@uci.edu';
+[2019/06/07 21:16:18][INFO][retrieveByEmailFromDB]  Query succeeded. 
+[2019/06/07 21:16:18][INFO][VerifySessionFromDB]  Trying VERIFY SESSSION query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID, email, status, timeCreated, lastUsed, exprTime FROM sessions WHERE sessionID LIKE '68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068';
+[2019/06/07 21:16:18][INFO][VerifySessionFromDB]  Query succeeded. 
+[2019/06/07 21:16:21][INFO][getSesh]  Received request for verifying a session.
+[2019/06/07 21:16:21][INFO][getSesh]  Request:
+{"email":"gmehta1@uci.edu","sessionID":"68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068"}
+
+[2019/06/07 21:16:21][INFO][getSesh]  Email: gmehta1@uci.edu
+[2019/06/07 21:16:21][INFO][getSesh]  SessionID: 68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068
+[2019/06/07 21:16:21][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email = 'gmehta1@uci.edu';
+[2019/06/07 21:16:21][INFO][retrieveByEmailFromDB]  Query succeeded. 
+[2019/06/07 21:16:21][INFO][VerifySessionFromDB]  Trying VERIFY SESSSION query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID, email, status, timeCreated, lastUsed, exprTime FROM sessions WHERE sessionID LIKE '68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068';
+[2019/06/07 21:16:22][INFO][VerifySessionFromDB]  Query succeeded. 
+[2019/06/07 21:16:33][INFO][getSesh]  Received request for verifying a session.
+[2019/06/07 21:16:33][INFO][getSesh]  Request:
+{"email":"gmehta1@uci.edu","sessionID":"68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068"}
+
+[2019/06/07 21:16:33][INFO][getSesh]  Email: gmehta1@uci.edu
+[2019/06/07 21:16:33][INFO][getSesh]  SessionID: 68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068
+[2019/06/07 21:16:33][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email = 'gmehta1@uci.edu';
+[2019/06/07 21:16:33][INFO][retrieveByEmailFromDB]  Query succeeded. 
+[2019/06/07 21:16:33][INFO][VerifySessionFromDB]  Trying VERIFY SESSSION query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID, email, status, timeCreated, lastUsed, exprTime FROM sessions WHERE sessionID LIKE '68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068';
+[2019/06/07 21:16:33][INFO][VerifySessionFromDB]  Query succeeded. 
+[2019/06/07 21:16:57][INFO][getSesh]  Received request for verifying a session.
+[2019/06/07 21:16:57][INFO][getSesh]  Request:
+{"email":"gmehta1@uci.edu","sessionID":"68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068"}
+
+[2019/06/07 21:16:57][INFO][getSesh]  Email: gmehta1@uci.edu
+[2019/06/07 21:16:57][INFO][getSesh]  SessionID: 68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068
+[2019/06/07 21:16:57][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email = 'gmehta1@uci.edu';
+[2019/06/07 21:16:57][INFO][retrieveByEmailFromDB]  Query succeeded. 
+[2019/06/07 21:16:57][INFO][VerifySessionFromDB]  Trying VERIFY SESSSION query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID, email, status, timeCreated, lastUsed, exprTime FROM sessions WHERE sessionID LIKE '68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068';
+[2019/06/07 21:16:57][INFO][VerifySessionFromDB]  Query succeeded. 
+[2019/06/07 21:17:07][INFO][getSesh]  Received request for verifying a session.
+[2019/06/07 21:17:07][INFO][getSesh]  Request:
+{"email":"gmehta1@uci.edu","sessionID":"68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068"}
+
+[2019/06/07 21:17:07][INFO][getSesh]  Email: gmehta1@uci.edu
+[2019/06/07 21:17:07][INFO][getSesh]  SessionID: 68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068
+[2019/06/07 21:17:07][INFO][retrieveByEmailFromDB]  Trying query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT email FROM users WHERE email = 'gmehta1@uci.edu';
+[2019/06/07 21:17:07][INFO][retrieveByEmailFromDB]  Query succeeded. 
+[2019/06/07 21:17:07][INFO][VerifySessionFromDB]  Trying VERIFY SESSSION query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT sessionID, email, status, timeCreated, lastUsed, exprTime FROM sessions WHERE sessionID LIKE '68d986521b63b9f2613d108ddab41366d6d86c2d4381779b59c829963c6c7a6323a5fa233c2c7d59ce0530126769a911c864f915930401ca0228fadd4e6f5068';
+[2019/06/07 21:17:07][INFO][VerifySessionFromDB]  Query succeeded. 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="edu.uci.ics.gmehta1.frontend.main" target="1.8" />
+      <module name="edu.uci.ics.gmehta1.frontend.test" target="1.8" />
+      <module name="edu.uci.ics.UCInetID.frontend.main" target="1.8" />
+      <module name="edu.uci.ics.UCInetID.frontend.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

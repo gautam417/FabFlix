@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="edu.uci.ics.gmehta1.service.idm.jar.main" target="1.8" />
+      <module name="edu.uci.ics.gmehta1.service.idm.jar.test" target="1.8" />
+      <module name="edu.uci.ics.gmehta1.service.idm.main" target="1.8" />
+      <module name="edu.uci.ics.gmehta1.service.idm.test" target="1.8" />
+      <module name="edu.uci.ics.gmehta1.service.skeleton.main" target="1.8" />
+      <module name="edu.uci.ics.gmehta1.service.skeleton.test" target="1.8" />
+      <module name="edu.uci.ics.ucinetid.service.skeleton.main" target="1.8" />
+      <module name="edu.uci.ics.ucinetid.service.skeleton.test" target="1.8" />
+      <module name="edu.uci.ucinetid.service.skeleton.main" target="1.8" />
+      <module name="edu.uci.ucinetid.service.skeleton.test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

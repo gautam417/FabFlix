@@ -1,0 +1,424 @@
+[2019/06/07 21:09:44][CONFIG][initLogger]  Logging initialized.
+[2019/06/07 21:09:44][CONFIG][initService]  Starting service...
+[2019/06/07 21:09:44][CONFIG][currentConfigs]  Scheme: http://
+[2019/06/07 21:09:44][CONFIG][currentConfigs]  Hostname: 0.0.0.0
+[2019/06/07 21:09:44][CONFIG][currentConfigs]  Port: 5361
+[2019/06/07 21:09:44][CONFIG][currentConfigs]  Path: /api/movies
+[2019/06/07 21:09:44][CONFIG][currentConfigs]  Logger output directory: ./logs/
+[2019/06/07 21:09:44][CONFIG][currentConfigs]  Logger output file: movies.log
+[2019/06/07 21:09:44][CONFIG][currentConfigs]  Database hostname: colin-baker-v3.ics.uci.edu
+[2019/06/07 21:09:44][CONFIG][currentConfigs]  Database port: 3306
+[2019/06/07 21:09:44][CONFIG][currentConfigs]  Database username: cs122b_db92
+[2019/06/07 21:09:44][CONFIG][currentConfigs]  Database password provided? true
+[2019/06/07 21:09:44][CONFIG][currentConfigs]  Database name: cs122b_db92
+[2019/06/07 21:09:44][CONFIG][currentConfigs]  Database driver: com.mysql.cj.jdbc.Driver
+[2019/06/07 21:09:44][CONFIG][currentConfigs]  Database connection settings: ?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/07 21:09:44][CONFIG][connectToDatabase]  Connecting to database...
+[2019/06/07 21:09:44][CONFIG][connectToDatabase]  Database URL: jdbc:mysql://colin-baker-v3.ics.uci.edu:3306/cs122b_db92?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/07 21:09:45][CONFIG][connectToDatabase]  Connected to database: jdbc:mysql://colin-baker-v3.ics.uci.edu:3306/cs122b_db92?autoReconnect=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=PST
+[2019/06/07 21:09:45][CONFIG][initHTTPServer]  Initializing HTTP server...
+[2019/06/07 21:09:45][CONFIG][initHTTPServer]  Building URI from movieConfigs...
+[2019/06/07 21:09:45][CONFIG][initHTTPServer]  Final URI: http://0.0.0.0:5361/api/movies
+[2019/06/07 21:09:45][CONFIG][initHTTPServer]  Set Jersey resources.
+[2019/06/07 21:09:45][CONFIG][initHTTPServer]  Set Jackson as serializer.
+[2019/06/07 21:09:45][CONFIG][initHTTPServer]  Starting HTTP server...
+[2019/06/07 21:09:47][CONFIG][initHTTPServer]  HTTP server started.
+[2019/06/07 21:09:47][CONFIG][initService]  Service initialized.
+[2019/06/07 21:12:17][INFO][getSearchRequest]  EMAIL: null
+[2019/06/07 21:12:17][INFO][getSearchRequest]  SESSIONID: null
+[2019/06/07 21:12:17][INFO][getSearchRequest]  TRANSACTIONID: null
+[2019/06/07 21:12:17][INFO][getSearchRequest]  Received request to returns only basic info about movie from the movies & ratings tables.
+[2019/06/07 21:12:17][INFO][getSearchRequest]  title: Love
+[2019/06/07 21:12:17][INFO][getSearchRequest]  genre: 
+[2019/06/07 21:12:17][INFO][getSearchRequest]  year: 0
+[2019/06/07 21:12:17][INFO][getSearchRequest]  director: 
+[2019/06/07 21:12:17][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:12:17][INFO][getSearchRequest]  offset: 0
+[2019/06/07 21:12:17][INFO][getSearchRequest]  limit: 0
+[2019/06/07 21:12:17][INFO][getSearchRequest]  direction: null
+[2019/06/07 21:12:17][INFO][getSearchRequest]  orderby: null
+[2019/06/07 21:12:17][INFO][getSearchRequest]  Year is 0.
+[2019/06/07 21:12:17][INFO][getSearchRequest]  Check which values are null: {"title":"Love","genre":"","director":"","year":0,"hidden":false,"limit":10,"offset":0,"orderby":"rating","direction":"desc"}
+[2019/06/07 21:12:17][INFO][getSearchRequest]  Title: Love
+[2019/06/07 21:12:17][INFO][getSearchRequest]  Genre: 
+[2019/06/07 21:12:17][INFO][getSearchRequest]  Year: 0
+[2019/06/07 21:12:17][INFO][getSearchRequest]  Director: 
+[2019/06/07 21:12:17][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:12:17][INFO][getSearchRequest]  Offset: 0
+[2019/06/07 21:12:17][INFO][getSearchRequest]  Limit: 10
+[2019/06/07 21:12:17][INFO][getSearchRequest]  Sortby: desc
+[2019/06/07 21:12:17][INFO][getSearchRequest]  Orderby: rating
+[2019/06/07 21:12:17][INFO][retrieveMoviesFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movies.id, title, director, year, rating, numVotes FROM movies JOIN ratings ON ratings.movieId = movies.id, genres g, genres_in_movies gm WHERE movies.id = gm.movieId AND gm.genreId = g.id AND movies.year LIKE '%0%' AND movies.director LIKE '%%' AND movies.title LIKE '%Love%' AND g.name LIKE '%%' ORDER BY rating desc, title ASC LIMIT 0, 10;
+[2019/06/07 21:12:18][INFO][retrieveMoviesFromDB]  Query succeeded to retrieve movie records.
+[2019/06/07 21:12:18][INFO][buildModelFromList]  Creating model...
+[2019/06/07 21:12:18][INFO][buildModelFromList]  Movies list is not empty...
+[2019/06/07 21:12:18][INFO][buildModelFromList]  Len of Movies list: 10
+[2019/06/07 21:12:18][INFO][buildModelFromList]  Adding movie Love Lessons to array.
+[2019/06/07 21:12:18][INFO][buildModelFromList]  Adding movie Goodnight, We Love You to array.
+[2019/06/07 21:12:18][INFO][buildModelFromList]  Adding movie Love Like Blood to array.
+[2019/06/07 21:12:18][INFO][buildModelFromList]  Adding movie Falling. In Love to array.
+[2019/06/07 21:12:18][INFO][buildModelFromList]  Adding movie True Love to array.
+[2019/06/07 21:12:18][INFO][buildModelFromList]  Adding movie Love and Honor to array.
+[2019/06/07 21:12:18][INFO][buildModelFromList]  Adding movie Lovelorn to array.
+[2019/06/07 21:12:18][INFO][buildModelFromList]  Adding movie I Love Pinochet to array.
+[2019/06/07 21:12:18][INFO][buildModelFromList]  Adding movie For the Love of Dolly to array.
+[2019/06/07 21:12:18][INFO][buildModelFromList]  Adding movie Muskrat Lovely to array.
+[2019/06/07 21:13:11][INFO][getSearchRequest]  EMAIL: null
+[2019/06/07 21:13:11][INFO][getSearchRequest]  SESSIONID: null
+[2019/06/07 21:13:11][INFO][getSearchRequest]  TRANSACTIONID: null
+[2019/06/07 21:13:11][INFO][getSearchRequest]  Received request to returns only basic info about movie from the movies & ratings tables.
+[2019/06/07 21:13:11][INFO][getSearchRequest]  title: Love
+[2019/06/07 21:13:11][INFO][getSearchRequest]  genre: 
+[2019/06/07 21:13:11][INFO][getSearchRequest]  year: 0
+[2019/06/07 21:13:11][INFO][getSearchRequest]  director: 
+[2019/06/07 21:13:11][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:13:11][INFO][getSearchRequest]  offset: 0
+[2019/06/07 21:13:11][INFO][getSearchRequest]  limit: 0
+[2019/06/07 21:13:11][INFO][getSearchRequest]  direction: null
+[2019/06/07 21:13:11][INFO][getSearchRequest]  orderby: null
+[2019/06/07 21:13:11][INFO][getSearchRequest]  Year is 0.
+[2019/06/07 21:13:11][INFO][getSearchRequest]  Check which values are null: {"title":"Love","genre":"","director":"","year":0,"hidden":false,"limit":10,"offset":0,"orderby":"rating","direction":"desc"}
+[2019/06/07 21:13:11][INFO][getSearchRequest]  Title: Love
+[2019/06/07 21:13:11][INFO][getSearchRequest]  Genre: 
+[2019/06/07 21:13:11][INFO][getSearchRequest]  Year: 0
+[2019/06/07 21:13:11][INFO][getSearchRequest]  Director: 
+[2019/06/07 21:13:11][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:13:11][INFO][getSearchRequest]  Offset: 0
+[2019/06/07 21:13:11][INFO][getSearchRequest]  Limit: 10
+[2019/06/07 21:13:11][INFO][getSearchRequest]  Sortby: desc
+[2019/06/07 21:13:11][INFO][getSearchRequest]  Orderby: rating
+[2019/06/07 21:13:11][INFO][retrieveMoviesFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movies.id, title, director, year, rating, numVotes FROM movies JOIN ratings ON ratings.movieId = movies.id, genres g, genres_in_movies gm WHERE movies.id = gm.movieId AND gm.genreId = g.id AND movies.year LIKE '%0%' AND movies.director LIKE '%%' AND movies.title LIKE '%Love%' AND g.name LIKE '%%' ORDER BY rating desc, title ASC LIMIT 0, 10;
+[2019/06/07 21:13:11][INFO][retrieveMoviesFromDB]  Query succeeded to retrieve movie records.
+[2019/06/07 21:13:11][INFO][buildModelFromList]  Creating model...
+[2019/06/07 21:13:11][INFO][buildModelFromList]  Movies list is not empty...
+[2019/06/07 21:13:11][INFO][buildModelFromList]  Len of Movies list: 10
+[2019/06/07 21:13:11][INFO][buildModelFromList]  Adding movie Love Lessons to array.
+[2019/06/07 21:13:11][INFO][buildModelFromList]  Adding movie Goodnight, We Love You to array.
+[2019/06/07 21:13:11][INFO][buildModelFromList]  Adding movie Love Like Blood to array.
+[2019/06/07 21:13:11][INFO][buildModelFromList]  Adding movie Falling. In Love to array.
+[2019/06/07 21:13:11][INFO][buildModelFromList]  Adding movie True Love to array.
+[2019/06/07 21:13:11][INFO][buildModelFromList]  Adding movie Love and Honor to array.
+[2019/06/07 21:13:11][INFO][buildModelFromList]  Adding movie Lovelorn to array.
+[2019/06/07 21:13:11][INFO][buildModelFromList]  Adding movie I Love Pinochet to array.
+[2019/06/07 21:13:11][INFO][buildModelFromList]  Adding movie For the Love of Dolly to array.
+[2019/06/07 21:13:11][INFO][buildModelFromList]  Adding movie Muskrat Lovely to array.
+[2019/06/07 21:13:53][INFO][getSearchRequest]  EMAIL: null
+[2019/06/07 21:13:53][INFO][getSearchRequest]  SESSIONID: null
+[2019/06/07 21:13:53][INFO][getSearchRequest]  TRANSACTIONID: null
+[2019/06/07 21:13:53][INFO][getSearchRequest]  Received request to returns only basic info about movie from the movies & ratings tables.
+[2019/06/07 21:13:53][INFO][getSearchRequest]  title: null
+[2019/06/07 21:13:53][INFO][getSearchRequest]  genre: a
+[2019/06/07 21:13:53][INFO][getSearchRequest]  year: 0
+[2019/06/07 21:13:53][INFO][getSearchRequest]  director: null
+[2019/06/07 21:13:53][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:13:53][INFO][getSearchRequest]  offset: 0
+[2019/06/07 21:13:53][INFO][getSearchRequest]  limit: 0
+[2019/06/07 21:13:53][INFO][getSearchRequest]  direction: null
+[2019/06/07 21:13:53][INFO][getSearchRequest]  orderby: null
+[2019/06/07 21:13:53][INFO][getSearchRequest]  Director is null.
+[2019/06/07 21:13:53][INFO][getSearchRequest]  Title is null.
+[2019/06/07 21:13:53][INFO][getSearchRequest]  Year is 0.
+[2019/06/07 21:13:53][INFO][getSearchRequest]  Check which values are null: {"title":"","genre":"a","director":"","year":0,"hidden":false,"limit":10,"offset":0,"orderby":"rating","direction":"desc"}
+[2019/06/07 21:13:53][INFO][getSearchRequest]  Title: 
+[2019/06/07 21:13:53][INFO][getSearchRequest]  Genre: a
+[2019/06/07 21:13:53][INFO][getSearchRequest]  Year: 0
+[2019/06/07 21:13:53][INFO][getSearchRequest]  Director: 
+[2019/06/07 21:13:53][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:13:53][INFO][getSearchRequest]  Offset: 0
+[2019/06/07 21:13:53][INFO][getSearchRequest]  Limit: 10
+[2019/06/07 21:13:53][INFO][getSearchRequest]  Sortby: desc
+[2019/06/07 21:13:53][INFO][getSearchRequest]  Orderby: rating
+[2019/06/07 21:13:53][INFO][retrieveMoviesFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movies.id, title, director, year, rating, numVotes FROM movies JOIN ratings ON ratings.movieId = movies.id, genres g, genres_in_movies gm WHERE movies.id = gm.movieId AND gm.genreId = g.id AND movies.year LIKE '%0%' AND movies.director LIKE '%%' AND movies.title LIKE '%%' AND g.name LIKE '%a%' ORDER BY rating desc, title ASC LIMIT 0, 10;
+[2019/06/07 21:13:53][INFO][retrieveMoviesFromDB]  Query succeeded to retrieve movie records.
+[2019/06/07 21:13:53][INFO][buildModelFromList]  Creating model...
+[2019/06/07 21:13:53][INFO][buildModelFromList]  Movies list is not empty...
+[2019/06/07 21:13:53][INFO][buildModelFromList]  Len of Movies list: 10
+[2019/06/07 21:13:53][INFO][buildModelFromList]  Adding movie Loma Lynda: Episode II to array.
+[2019/06/07 21:13:53][INFO][buildModelFromList]  Adding movie Addo: The King of the Beasts to array.
+[2019/06/07 21:13:53][INFO][buildModelFromList]  Adding movie American Generator to array.
+[2019/06/07 21:13:53][INFO][buildModelFromList]  Adding movie Die Perle in der Kacke to array.
+[2019/06/07 21:13:53][INFO][buildModelFromList]  Adding movie Drip to array.
+[2019/06/07 21:13:53][INFO][buildModelFromList]  Adding movie Footlong to array.
+[2019/06/07 21:13:53][INFO][buildModelFromList]  Adding movie Four Bangers to array.
+[2019/06/07 21:13:53][INFO][buildModelFromList]  Adding movie Laffit: All About Winning to array.
+[2019/06/07 21:13:53][INFO][buildModelFromList]  Adding movie The Closer She Gets to array.
+[2019/06/07 21:13:53][INFO][buildModelFromList]  Adding movie The Myster General to array.
+[2019/06/07 21:14:23][INFO][getMovieRecord]  EMAIL: null
+[2019/06/07 21:14:23][INFO][getMovieRecord]  SESSIONID: null
+[2019/06/07 21:14:23][INFO][getMovieRecord]  TRANSACTIONID: null
+[2019/06/07 21:14:23][INFO][getMovieRecord]  Received request to return the full details of a movie, including all fields from movies, ratings, all genres the movie belongs to, and all actors in the movie.
+[2019/06/07 21:14:23][INFO][getMovieRecord]  MovieId: tt0349853
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Trying genres query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT g.id, g.name FROM movies, genres g, genres_in_movies gm WHERE movies.id = gm.movieId AND gm.genreId = g.id AND movies.id = 'tt0349853';
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Adding genre Comedy to genre array.
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Adding genre Documentary to genre array.
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Trying stars query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT s.id, s.name, birthYear FROM movies, stars s, stars_in_movies sm WHERE movies.id = sm.movieId AND sm.starId = s.id AND movies.id = 'tt0349853';
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Adding star Brendan Cleaves to star array.
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Adding star Stuart Foreman to star array.
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Adding star Tristian Daily to star array.
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Adding star Jon Draper to star array.
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Adding star Sebastian Iles to star array.
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Adding star Christian Marr to star array.
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Adding star Patrick Milner to star array.
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Adding star Matthew White to star array.
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Adding star Christopher Cox to star array.
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Adding star Alex Cox to star array.
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Trying movies query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movies.id, title, director, year, backdrop_path, budget, overview, poster_path, revenue, rating, numVotes FROM movies JOIN ratings ON ratings.movieId = movies.id WHERE movies.id = 'tt0349853';
+[2019/06/07 21:14:23][INFO][getMoviesFromDB]  Query succeeded to retrieve movie records.
+[2019/06/07 21:14:23][INFO][buildModelFromList]  Creating model...
+[2019/06/07 21:14:23][INFO][buildModelFromList]  Movies list is not empty...
+[2019/06/07 21:14:23][INFO][buildModelFromList]  Adding student The Myster General to array.
+[2019/06/07 21:14:31][INFO][getSearchRequest]  EMAIL: null
+[2019/06/07 21:14:31][INFO][getSearchRequest]  SESSIONID: null
+[2019/06/07 21:14:31][INFO][getSearchRequest]  TRANSACTIONID: null
+[2019/06/07 21:14:31][INFO][getSearchRequest]  Received request to returns only basic info about movie from the movies & ratings tables.
+[2019/06/07 21:14:31][INFO][getSearchRequest]  title: A
+[2019/06/07 21:14:31][INFO][getSearchRequest]  genre: 
+[2019/06/07 21:14:31][INFO][getSearchRequest]  year: 0
+[2019/06/07 21:14:31][INFO][getSearchRequest]  director: 
+[2019/06/07 21:14:31][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:14:31][INFO][getSearchRequest]  offset: 0
+[2019/06/07 21:14:31][INFO][getSearchRequest]  limit: 0
+[2019/06/07 21:14:31][INFO][getSearchRequest]  direction: null
+[2019/06/07 21:14:31][INFO][getSearchRequest]  orderby: null
+[2019/06/07 21:14:31][INFO][getSearchRequest]  Year is 0.
+[2019/06/07 21:14:31][INFO][getSearchRequest]  Check which values are null: {"title":"A","genre":"","director":"","year":0,"hidden":false,"limit":10,"offset":0,"orderby":"rating","direction":"desc"}
+[2019/06/07 21:14:31][INFO][getSearchRequest]  Title: A
+[2019/06/07 21:14:31][INFO][getSearchRequest]  Genre: 
+[2019/06/07 21:14:31][INFO][getSearchRequest]  Year: 0
+[2019/06/07 21:14:31][INFO][getSearchRequest]  Director: 
+[2019/06/07 21:14:31][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:14:31][INFO][getSearchRequest]  Offset: 0
+[2019/06/07 21:14:31][INFO][getSearchRequest]  Limit: 10
+[2019/06/07 21:14:31][INFO][getSearchRequest]  Sortby: desc
+[2019/06/07 21:14:31][INFO][getSearchRequest]  Orderby: rating
+[2019/06/07 21:14:31][INFO][retrieveMoviesFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movies.id, title, director, year, rating, numVotes FROM movies JOIN ratings ON ratings.movieId = movies.id, genres g, genres_in_movies gm WHERE movies.id = gm.movieId AND gm.genreId = g.id AND movies.year LIKE '%0%' AND movies.director LIKE '%%' AND movies.title LIKE '%A%' AND g.name LIKE '%%' ORDER BY rating desc, title ASC LIMIT 0, 10;
+[2019/06/07 21:14:32][INFO][retrieveMoviesFromDB]  Query succeeded to retrieve movie records.
+[2019/06/07 21:14:32][INFO][buildModelFromList]  Creating model...
+[2019/06/07 21:14:32][INFO][buildModelFromList]  Movies list is not empty...
+[2019/06/07 21:14:32][INFO][buildModelFromList]  Len of Movies list: 10
+[2019/06/07 21:14:32][INFO][buildModelFromList]  Adding movie Loma Lynda: Episode II to array.
+[2019/06/07 21:14:32][INFO][buildModelFromList]  Adding movie Addo: The King of the Beasts to array.
+[2019/06/07 21:14:32][INFO][buildModelFromList]  Adding movie American Generator to array.
+[2019/06/07 21:14:32][INFO][buildModelFromList]  Adding movie Die Perle in der Kacke to array.
+[2019/06/07 21:14:32][INFO][buildModelFromList]  Adding movie Four Bangers to array.
+[2019/06/07 21:14:32][INFO][buildModelFromList]  Adding movie Laffit: All About Winning to array.
+[2019/06/07 21:14:32][INFO][buildModelFromList]  Adding movie The Myster General to array.
+[2019/06/07 21:14:32][INFO][buildModelFromList]  Adding movie Miracle Boy and Nyquist to array.
+[2019/06/07 21:14:32][INFO][buildModelFromList]  Adding movie Obstacle to array.
+[2019/06/07 21:14:32][INFO][buildModelFromList]  Adding movie Old Coaches to array.
+[2019/06/07 21:15:25][INFO][getSearchRequest]  EMAIL: null
+[2019/06/07 21:15:25][INFO][getSearchRequest]  SESSIONID: null
+[2019/06/07 21:15:25][INFO][getSearchRequest]  TRANSACTIONID: null
+[2019/06/07 21:15:25][INFO][getSearchRequest]  Received request to returns only basic info about movie from the movies & ratings tables.
+[2019/06/07 21:15:25][INFO][getSearchRequest]  title: Love
+[2019/06/07 21:15:25][INFO][getSearchRequest]  genre: 
+[2019/06/07 21:15:25][INFO][getSearchRequest]  year: 0
+[2019/06/07 21:15:25][INFO][getSearchRequest]  director: 
+[2019/06/07 21:15:25][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:15:25][INFO][getSearchRequest]  offset: 0
+[2019/06/07 21:15:25][INFO][getSearchRequest]  limit: 0
+[2019/06/07 21:15:25][INFO][getSearchRequest]  direction: null
+[2019/06/07 21:15:25][INFO][getSearchRequest]  orderby: null
+[2019/06/07 21:15:25][INFO][getSearchRequest]  Year is 0.
+[2019/06/07 21:15:25][INFO][getSearchRequest]  Check which values are null: {"title":"Love","genre":"","director":"","year":0,"hidden":false,"limit":10,"offset":0,"orderby":"rating","direction":"desc"}
+[2019/06/07 21:15:25][INFO][getSearchRequest]  Title: Love
+[2019/06/07 21:15:25][INFO][getSearchRequest]  Genre: 
+[2019/06/07 21:15:25][INFO][getSearchRequest]  Year: 0
+[2019/06/07 21:15:25][INFO][getSearchRequest]  Director: 
+[2019/06/07 21:15:25][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:15:25][INFO][getSearchRequest]  Offset: 0
+[2019/06/07 21:15:25][INFO][getSearchRequest]  Limit: 10
+[2019/06/07 21:15:25][INFO][getSearchRequest]  Sortby: desc
+[2019/06/07 21:15:25][INFO][getSearchRequest]  Orderby: rating
+[2019/06/07 21:15:25][INFO][retrieveMoviesFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movies.id, title, director, year, rating, numVotes FROM movies JOIN ratings ON ratings.movieId = movies.id, genres g, genres_in_movies gm WHERE movies.id = gm.movieId AND gm.genreId = g.id AND movies.year LIKE '%0%' AND movies.director LIKE '%%' AND movies.title LIKE '%Love%' AND g.name LIKE '%%' ORDER BY rating desc, title ASC LIMIT 0, 10;
+[2019/06/07 21:15:25][INFO][retrieveMoviesFromDB]  Query succeeded to retrieve movie records.
+[2019/06/07 21:15:25][INFO][buildModelFromList]  Creating model...
+[2019/06/07 21:15:25][INFO][buildModelFromList]  Movies list is not empty...
+[2019/06/07 21:15:25][INFO][buildModelFromList]  Len of Movies list: 10
+[2019/06/07 21:15:25][INFO][buildModelFromList]  Adding movie Love Lessons to array.
+[2019/06/07 21:15:25][INFO][buildModelFromList]  Adding movie Goodnight, We Love You to array.
+[2019/06/07 21:15:25][INFO][buildModelFromList]  Adding movie Love Like Blood to array.
+[2019/06/07 21:15:25][INFO][buildModelFromList]  Adding movie Falling. In Love to array.
+[2019/06/07 21:15:25][INFO][buildModelFromList]  Adding movie True Love to array.
+[2019/06/07 21:15:25][INFO][buildModelFromList]  Adding movie Love and Honor to array.
+[2019/06/07 21:15:25][INFO][buildModelFromList]  Adding movie Lovelorn to array.
+[2019/06/07 21:15:25][INFO][buildModelFromList]  Adding movie I Love Pinochet to array.
+[2019/06/07 21:15:25][INFO][buildModelFromList]  Adding movie For the Love of Dolly to array.
+[2019/06/07 21:15:25][INFO][buildModelFromList]  Adding movie Muskrat Lovely to array.
+[2019/06/07 21:15:32][INFO][getMovieRecord]  EMAIL: null
+[2019/06/07 21:15:32][INFO][getMovieRecord]  SESSIONID: null
+[2019/06/07 21:15:32][INFO][getMovieRecord]  TRANSACTIONID: null
+[2019/06/07 21:15:32][INFO][getMovieRecord]  Received request to return the full details of a movie, including all fields from movies, ratings, all genres the movie belongs to, and all actors in the movie.
+[2019/06/07 21:15:32][INFO][getMovieRecord]  MovieId: tt0451103
+[2019/06/07 21:15:32][INFO][getMoviesFromDB]  Trying genres query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT g.id, g.name FROM movies, genres g, genres_in_movies gm WHERE movies.id = gm.movieId AND gm.genreId = g.id AND movies.id = 'tt0451103';
+[2019/06/07 21:15:33][INFO][getMoviesFromDB]  Adding genre Comedy to genre array.
+[2019/06/07 21:15:33][INFO][getMoviesFromDB]  Trying stars query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT s.id, s.name, birthYear FROM movies, stars s, stars_in_movies sm WHERE movies.id = sm.movieId AND sm.starId = s.id AND movies.id = 'tt0451103';
+[2019/06/07 21:15:33][INFO][getMoviesFromDB]  Adding star Ian Dudley to star array.
+[2019/06/07 21:15:33][INFO][getMoviesFromDB]  Adding star Brent Katz to star array.
+[2019/06/07 21:15:33][INFO][getMoviesFromDB]  Adding star Eric Milano to star array.
+[2019/06/07 21:15:33][INFO][getMoviesFromDB]  Adding star Todd Zelin to star array.
+[2019/06/07 21:15:33][INFO][getMoviesFromDB]  Adding star Marcia T. Mohiuddin to star array.
+[2019/06/07 21:15:33][INFO][getMoviesFromDB]  Adding star Jon Stahl to star array.
+[2019/06/07 21:15:33][INFO][getMoviesFromDB]  Adding star Sam Greenfield to star array.
+[2019/06/07 21:15:33][INFO][getMoviesFromDB]  Adding star Louise Gallanda to star array.
+[2019/06/07 21:15:33][INFO][getMoviesFromDB]  Adding star Jennifer Kalison to star array.
+[2019/06/07 21:15:33][INFO][getMoviesFromDB]  Trying movies query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movies.id, title, director, year, backdrop_path, budget, overview, poster_path, revenue, rating, numVotes FROM movies JOIN ratings ON ratings.movieId = movies.id WHERE movies.id = 'tt0451103';
+[2019/06/07 21:15:33][INFO][getMoviesFromDB]  Query succeeded to retrieve movie records.
+[2019/06/07 21:15:33][INFO][buildModelFromList]  Creating model...
+[2019/06/07 21:15:33][INFO][buildModelFromList]  Movies list is not empty...
+[2019/06/07 21:15:33][INFO][buildModelFromList]  Adding student Love Lessons to array.
+[2019/06/07 21:16:18][INFO][getSearchRequest]  EMAIL: null
+[2019/06/07 21:16:18][INFO][getSearchRequest]  SESSIONID: null
+[2019/06/07 21:16:18][INFO][getSearchRequest]  TRANSACTIONID: null
+[2019/06/07 21:16:18][INFO][getSearchRequest]  Received request to returns only basic info about movie from the movies & ratings tables.
+[2019/06/07 21:16:18][INFO][getSearchRequest]  title: A
+[2019/06/07 21:16:18][INFO][getSearchRequest]  genre: 
+[2019/06/07 21:16:18][INFO][getSearchRequest]  year: 0
+[2019/06/07 21:16:18][INFO][getSearchRequest]  director: 
+[2019/06/07 21:16:18][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:16:18][INFO][getSearchRequest]  offset: 0
+[2019/06/07 21:16:18][INFO][getSearchRequest]  limit: 0
+[2019/06/07 21:16:18][INFO][getSearchRequest]  direction: null
+[2019/06/07 21:16:18][INFO][getSearchRequest]  orderby: null
+[2019/06/07 21:16:18][INFO][getSearchRequest]  Year is 0.
+[2019/06/07 21:16:18][INFO][getSearchRequest]  Check which values are null: {"title":"A","genre":"","director":"","year":0,"hidden":false,"limit":10,"offset":0,"orderby":"rating","direction":"desc"}
+[2019/06/07 21:16:18][INFO][getSearchRequest]  Title: A
+[2019/06/07 21:16:18][INFO][getSearchRequest]  Genre: 
+[2019/06/07 21:16:18][INFO][getSearchRequest]  Year: 0
+[2019/06/07 21:16:18][INFO][getSearchRequest]  Director: 
+[2019/06/07 21:16:18][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:16:18][INFO][getSearchRequest]  Offset: 0
+[2019/06/07 21:16:18][INFO][getSearchRequest]  Limit: 10
+[2019/06/07 21:16:18][INFO][getSearchRequest]  Sortby: desc
+[2019/06/07 21:16:18][INFO][getSearchRequest]  Orderby: rating
+[2019/06/07 21:16:18][INFO][retrieveMoviesFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movies.id, title, director, year, rating, numVotes FROM movies JOIN ratings ON ratings.movieId = movies.id, genres g, genres_in_movies gm WHERE movies.id = gm.movieId AND gm.genreId = g.id AND movies.year LIKE '%0%' AND movies.director LIKE '%%' AND movies.title LIKE '%A%' AND g.name LIKE '%%' ORDER BY rating desc, title ASC LIMIT 0, 10;
+[2019/06/07 21:16:18][INFO][retrieveMoviesFromDB]  Query succeeded to retrieve movie records.
+[2019/06/07 21:16:18][INFO][buildModelFromList]  Creating model...
+[2019/06/07 21:16:18][INFO][buildModelFromList]  Movies list is not empty...
+[2019/06/07 21:16:18][INFO][buildModelFromList]  Len of Movies list: 10
+[2019/06/07 21:16:18][INFO][buildModelFromList]  Adding movie Loma Lynda: Episode II to array.
+[2019/06/07 21:16:18][INFO][buildModelFromList]  Adding movie Addo: The King of the Beasts to array.
+[2019/06/07 21:16:18][INFO][buildModelFromList]  Adding movie American Generator to array.
+[2019/06/07 21:16:18][INFO][buildModelFromList]  Adding movie Die Perle in der Kacke to array.
+[2019/06/07 21:16:18][INFO][buildModelFromList]  Adding movie Four Bangers to array.
+[2019/06/07 21:16:18][INFO][buildModelFromList]  Adding movie Laffit: All About Winning to array.
+[2019/06/07 21:16:18][INFO][buildModelFromList]  Adding movie The Myster General to array.
+[2019/06/07 21:16:18][INFO][buildModelFromList]  Adding movie Miracle Boy and Nyquist to array.
+[2019/06/07 21:16:18][INFO][buildModelFromList]  Adding movie Obstacle to array.
+[2019/06/07 21:16:18][INFO][buildModelFromList]  Adding movie Old Coaches to array.
+[2019/06/07 21:16:22][INFO][getMovieRecord]  EMAIL: null
+[2019/06/07 21:16:22][INFO][getMovieRecord]  SESSIONID: null
+[2019/06/07 21:16:22][INFO][getMovieRecord]  TRANSACTIONID: null
+[2019/06/07 21:16:22][INFO][getMovieRecord]  Received request to return the full details of a movie, including all fields from movies, ratings, all genres the movie belongs to, and all actors in the movie.
+[2019/06/07 21:16:22][INFO][getMovieRecord]  MovieId: tt0395642
+[2019/06/07 21:16:22][INFO][getMoviesFromDB]  Trying genres query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT g.id, g.name FROM movies, genres g, genres_in_movies gm WHERE movies.id = gm.movieId AND gm.genreId = g.id AND movies.id = 'tt0395642';
+[2019/06/07 21:16:22][INFO][getMoviesFromDB]  Adding genre Drama to genre array.
+[2019/06/07 21:16:22][INFO][getMoviesFromDB]  Trying stars query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT s.id, s.name, birthYear FROM movies, stars s, stars_in_movies sm WHERE movies.id = sm.movieId AND sm.starId = s.id AND movies.id = 'tt0395642';
+[2019/06/07 21:16:22][INFO][getMoviesFromDB]  Adding star Jason Bognacki to star array.
+[2019/06/07 21:16:22][INFO][getMoviesFromDB]  Adding star Sarah Ellquist to star array.
+[2019/06/07 21:16:22][INFO][getMoviesFromDB]  Adding star Daniel DeBlanke to star array.
+[2019/06/07 21:16:22][INFO][getMoviesFromDB]  Adding star Chris Mammone to star array.
+[2019/06/07 21:16:22][INFO][getMoviesFromDB]  Trying movies query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movies.id, title, director, year, backdrop_path, budget, overview, poster_path, revenue, rating, numVotes FROM movies JOIN ratings ON ratings.movieId = movies.id WHERE movies.id = 'tt0395642';
+[2019/06/07 21:16:22][INFO][getMoviesFromDB]  Query succeeded to retrieve movie records.
+[2019/06/07 21:16:22][INFO][buildModelFromList]  Creating model...
+[2019/06/07 21:16:22][INFO][buildModelFromList]  Movies list is not empty...
+[2019/06/07 21:16:22][INFO][buildModelFromList]  Adding student Loma Lynda: Episode II to array.
+[2019/06/07 21:16:33][INFO][getSearchRequest]  EMAIL: null
+[2019/06/07 21:16:33][INFO][getSearchRequest]  SESSIONID: null
+[2019/06/07 21:16:33][INFO][getSearchRequest]  TRANSACTIONID: null
+[2019/06/07 21:16:33][INFO][getSearchRequest]  Received request to returns only basic info about movie from the movies & ratings tables.
+[2019/06/07 21:16:33][INFO][getSearchRequest]  title: null
+[2019/06/07 21:16:33][INFO][getSearchRequest]  genre: A
+[2019/06/07 21:16:33][INFO][getSearchRequest]  year: 0
+[2019/06/07 21:16:33][INFO][getSearchRequest]  director: null
+[2019/06/07 21:16:33][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:16:33][INFO][getSearchRequest]  offset: 0
+[2019/06/07 21:16:33][INFO][getSearchRequest]  limit: 0
+[2019/06/07 21:16:33][INFO][getSearchRequest]  direction: null
+[2019/06/07 21:16:33][INFO][getSearchRequest]  orderby: null
+[2019/06/07 21:16:33][INFO][getSearchRequest]  Director is null.
+[2019/06/07 21:16:33][INFO][getSearchRequest]  Title is null.
+[2019/06/07 21:16:33][INFO][getSearchRequest]  Year is 0.
+[2019/06/07 21:16:33][INFO][getSearchRequest]  Check which values are null: {"title":"","genre":"A","director":"","year":0,"hidden":false,"limit":10,"offset":0,"orderby":"rating","direction":"desc"}
+[2019/06/07 21:16:33][INFO][getSearchRequest]  Title: 
+[2019/06/07 21:16:33][INFO][getSearchRequest]  Genre: A
+[2019/06/07 21:16:33][INFO][getSearchRequest]  Year: 0
+[2019/06/07 21:16:33][INFO][getSearchRequest]  Director: 
+[2019/06/07 21:16:33][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:16:33][INFO][getSearchRequest]  Offset: 0
+[2019/06/07 21:16:33][INFO][getSearchRequest]  Limit: 10
+[2019/06/07 21:16:33][INFO][getSearchRequest]  Sortby: desc
+[2019/06/07 21:16:33][INFO][getSearchRequest]  Orderby: rating
+[2019/06/07 21:16:33][INFO][retrieveMoviesFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movies.id, title, director, year, rating, numVotes FROM movies JOIN ratings ON ratings.movieId = movies.id, genres g, genres_in_movies gm WHERE movies.id = gm.movieId AND gm.genreId = g.id AND movies.year LIKE '%0%' AND movies.director LIKE '%%' AND movies.title LIKE '%%' AND g.name LIKE '%A%' ORDER BY rating desc, title ASC LIMIT 0, 10;
+[2019/06/07 21:16:33][INFO][retrieveMoviesFromDB]  Query succeeded to retrieve movie records.
+[2019/06/07 21:16:33][INFO][buildModelFromList]  Creating model...
+[2019/06/07 21:16:33][INFO][buildModelFromList]  Movies list is not empty...
+[2019/06/07 21:16:33][INFO][buildModelFromList]  Len of Movies list: 10
+[2019/06/07 21:16:33][INFO][buildModelFromList]  Adding movie Loma Lynda: Episode II to array.
+[2019/06/07 21:16:33][INFO][buildModelFromList]  Adding movie Addo: The King of the Beasts to array.
+[2019/06/07 21:16:33][INFO][buildModelFromList]  Adding movie American Generator to array.
+[2019/06/07 21:16:33][INFO][buildModelFromList]  Adding movie Die Perle in der Kacke to array.
+[2019/06/07 21:16:33][INFO][buildModelFromList]  Adding movie Drip to array.
+[2019/06/07 21:16:33][INFO][buildModelFromList]  Adding movie Footlong to array.
+[2019/06/07 21:16:33][INFO][buildModelFromList]  Adding movie Four Bangers to array.
+[2019/06/07 21:16:33][INFO][buildModelFromList]  Adding movie Laffit: All About Winning to array.
+[2019/06/07 21:16:33][INFO][buildModelFromList]  Adding movie The Closer She Gets to array.
+[2019/06/07 21:16:33][INFO][buildModelFromList]  Adding movie The Myster General to array.
+[2019/06/07 21:16:57][INFO][getMovieRecord]  EMAIL: null
+[2019/06/07 21:16:57][INFO][getMovieRecord]  SESSIONID: null
+[2019/06/07 21:16:57][INFO][getMovieRecord]  TRANSACTIONID: null
+[2019/06/07 21:16:57][INFO][getMovieRecord]  Received request to return the full details of a movie, including all fields from movies, ratings, all genres the movie belongs to, and all actors in the movie.
+[2019/06/07 21:16:57][INFO][getMovieRecord]  MovieId: tt0395642
+[2019/06/07 21:16:57][INFO][getMoviesFromDB]  Trying genres query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT g.id, g.name FROM movies, genres g, genres_in_movies gm WHERE movies.id = gm.movieId AND gm.genreId = g.id AND movies.id = 'tt0395642';
+[2019/06/07 21:16:57][INFO][getMoviesFromDB]  Adding genre Drama to genre array.
+[2019/06/07 21:16:57][INFO][getMoviesFromDB]  Trying stars query: com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT s.id, s.name, birthYear FROM movies, stars s, stars_in_movies sm WHERE movies.id = sm.movieId AND sm.starId = s.id AND movies.id = 'tt0395642';
+[2019/06/07 21:16:57][INFO][getMoviesFromDB]  Adding star Jason Bognacki to star array.
+[2019/06/07 21:16:57][INFO][getMoviesFromDB]  Adding star Sarah Ellquist to star array.
+[2019/06/07 21:16:57][INFO][getMoviesFromDB]  Adding star Daniel DeBlanke to star array.
+[2019/06/07 21:16:57][INFO][getMoviesFromDB]  Adding star Chris Mammone to star array.
+[2019/06/07 21:16:57][INFO][getMoviesFromDB]  Trying movies query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movies.id, title, director, year, backdrop_path, budget, overview, poster_path, revenue, rating, numVotes FROM movies JOIN ratings ON ratings.movieId = movies.id WHERE movies.id = 'tt0395642';
+[2019/06/07 21:16:57][INFO][getMoviesFromDB]  Query succeeded to retrieve movie records.
+[2019/06/07 21:16:57][INFO][buildModelFromList]  Creating model...
+[2019/06/07 21:16:57][INFO][buildModelFromList]  Movies list is not empty...
+[2019/06/07 21:16:57][INFO][buildModelFromList]  Adding student Loma Lynda: Episode II to array.
+[2019/06/07 21:17:07][INFO][getSearchRequest]  EMAIL: null
+[2019/06/07 21:17:07][INFO][getSearchRequest]  SESSIONID: null
+[2019/06/07 21:17:07][INFO][getSearchRequest]  TRANSACTIONID: null
+[2019/06/07 21:17:07][INFO][getSearchRequest]  Received request to returns only basic info about movie from the movies & ratings tables.
+[2019/06/07 21:17:07][INFO][getSearchRequest]  title: null
+[2019/06/07 21:17:07][INFO][getSearchRequest]  genre: A
+[2019/06/07 21:17:07][INFO][getSearchRequest]  year: 0
+[2019/06/07 21:17:07][INFO][getSearchRequest]  director: null
+[2019/06/07 21:17:07][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:17:07][INFO][getSearchRequest]  offset: 0
+[2019/06/07 21:17:07][INFO][getSearchRequest]  limit: 0
+[2019/06/07 21:17:07][INFO][getSearchRequest]  direction: null
+[2019/06/07 21:17:07][INFO][getSearchRequest]  orderby: null
+[2019/06/07 21:17:07][INFO][getSearchRequest]  Director is null.
+[2019/06/07 21:17:07][INFO][getSearchRequest]  Title is null.
+[2019/06/07 21:17:07][INFO][getSearchRequest]  Year is 0.
+[2019/06/07 21:17:07][INFO][getSearchRequest]  Check which values are null: {"title":"","genre":"A","director":"","year":0,"hidden":false,"limit":10,"offset":0,"orderby":"rating","direction":"desc"}
+[2019/06/07 21:17:07][INFO][getSearchRequest]  Title: 
+[2019/06/07 21:17:07][INFO][getSearchRequest]  Genre: A
+[2019/06/07 21:17:07][INFO][getSearchRequest]  Year: 0
+[2019/06/07 21:17:07][INFO][getSearchRequest]  Director: 
+[2019/06/07 21:17:07][INFO][getSearchRequest]  hidden: false
+[2019/06/07 21:17:07][INFO][getSearchRequest]  Offset: 0
+[2019/06/07 21:17:07][INFO][getSearchRequest]  Limit: 10
+[2019/06/07 21:17:07][INFO][getSearchRequest]  Sortby: desc
+[2019/06/07 21:17:07][INFO][getSearchRequest]  Orderby: rating
+[2019/06/07 21:17:07][INFO][retrieveMoviesFromDB]  Trying query:com.mysql.cj.jdbc.ClientPreparedStatement: SELECT DISTINCT movies.id, title, director, year, rating, numVotes FROM movies JOIN ratings ON ratings.movieId = movies.id, genres g, genres_in_movies gm WHERE movies.id = gm.movieId AND gm.genreId = g.id AND movies.year LIKE '%0%' AND movies.director LIKE '%%' AND movies.title LIKE '%%' AND g.name LIKE '%A%' ORDER BY rating desc, title ASC LIMIT 0, 10;
+[2019/06/07 21:17:07][INFO][retrieveMoviesFromDB]  Query succeeded to retrieve movie records.
+[2019/06/07 21:17:07][INFO][buildModelFromList]  Creating model...
+[2019/06/07 21:17:07][INFO][buildModelFromList]  Movies list is not empty...
+[2019/06/07 21:17:07][INFO][buildModelFromList]  Len of Movies list: 10
+[2019/06/07 21:17:07][INFO][buildModelFromList]  Adding movie Loma Lynda: Episode II to array.
+[2019/06/07 21:17:08][INFO][buildModelFromList]  Adding movie Addo: The King of the Beasts to array.
+[2019/06/07 21:17:08][INFO][buildModelFromList]  Adding movie American Generator to array.
+[2019/06/07 21:17:08][INFO][buildModelFromList]  Adding movie Die Perle in der Kacke to array.
+[2019/06/07 21:17:08][INFO][buildModelFromList]  Adding movie Drip to array.
+[2019/06/07 21:17:08][INFO][buildModelFromList]  Adding movie Footlong to array.
+[2019/06/07 21:17:08][INFO][buildModelFromList]  Adding movie Four Bangers to array.
+[2019/06/07 21:17:08][INFO][buildModelFromList]  Adding movie Laffit: All About Winning to array.
+[2019/06/07 21:17:08][INFO][buildModelFromList]  Adding movie The Closer She Gets to array.
+[2019/06/07 21:17:08][INFO][buildModelFromList]  Adding movie The Myster General to array.
